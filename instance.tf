@@ -9,7 +9,7 @@ tags = {
   subnet_id = aws_subnet.public_subnets[1].id
 # Security Group
   vpc_security_group_ids = ["${aws_security_group.ssh-allowed.id}"]
-# the Public SSH key
+# the Public SSH key. This relies on an ssh key pair of the same name being available in this directory (not included obviously)  
   key_name = aws_key_pair.aws-key.id
 # copy across the Python app to the instance
   provisioner "file" {
