@@ -25,10 +25,11 @@ tags = {
     sudo apt install python3-flask
     mkdir flask_dir && cd flask_dir
     python3 -m venv venv
+    cd venv
     source venv/bin/activate
     pip install flask
     python -m flask --version
-    unzip /tmp/flask_app.zip
+    sudo unzip /tmp/flask_app.zip
     cd /flask_dir/venv/flask
     flask run --host 0.0.0.0
     EOF
